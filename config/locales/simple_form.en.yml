@@ -1,0 +1,14 @@
+en:
+  simple_form:
+    placeholders:
+      card:
+        name: Name of your card
+    labels:
+      card:
+        name: Name
+
+  helpers:
+    submit:
+      card:
+        create: Create card
+        update: Update card

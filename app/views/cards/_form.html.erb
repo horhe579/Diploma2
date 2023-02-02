@@ -1,0 +1,14 @@
+<%= simple_form_for card,
+                    html: {
+                      class: "card form",
+                      #data: { turbo: false }
+                    } do |f| %>  
+  <% if card.errors.any? %>
+    <div class="error-message">
+      <%= card.errors.full_messages.to_sentence.capitalize %>
+    </div>
+  <% end %>
+
+  <%= f.input :name, input_html: { autofocus: true } %>
+  <%= f.submit class: "btn btn--secondary" %>
+<% end %>

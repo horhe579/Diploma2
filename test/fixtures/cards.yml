@@ -1,0 +1,10 @@
+# test/fixtures/files/cards.yml
+
+first:
+  name: First card
+
+second:
+  name: Second card
+
+third:
+  name: Third card
