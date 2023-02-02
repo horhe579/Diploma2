@@ -4,6 +4,9 @@
 * Sqlite3 
 * Start WSL
   *sudo service redis-server start
+  
   *rails/bin server
+  
   *yarn build --watch
+  
   *yarn build:css --watch
