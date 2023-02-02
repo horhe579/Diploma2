@@ -3,6 +3,7 @@
 * Rails v 7.0.4.1
 * Sqlite3 
 * Start WSL
+
   *sudo service redis-server start
   
   *rails/bin server
