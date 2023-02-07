@@ -1,24 +1,13 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby v 3.1.3p185
+* Rails v 7.0.4.1
+* Sqlite3 
+* Start WSL
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  *sudo service redis-server start
+  
+  *rails/bin server
+  
+  *yarn build --watch
+  
+  *yarn build:css --watch
