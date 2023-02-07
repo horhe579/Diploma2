@@ -7,6 +7,8 @@ gem "rails", "~> 7.0.4", ">= 7.0.4.1"
 
 gem "simple_form", "~> 5.1.0"
 
+gem "devise"
+
 gem "sprockets-rails"
 
 gem "sqlite3", "~> 1.4"

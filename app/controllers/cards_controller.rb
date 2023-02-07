@@ -2,7 +2,7 @@ class CardsController < ApplicationController
     before_action :set_card, only: [:show, :edit, :update, :destroy]
 
     def index
-        @cards = Card.ordered
+        @cards = current_company.cards.ordered
     end
     
     def show
@@ -13,12 +13,12 @@ class CardsController < ApplicationController
     end
     
     def create
-        @card = Card.new(card_params)
+        @card = current_company.cards.build(card_params)
     
         if @card.save
           respond_to do |format|
             format.html { redirect_to cards_path, notice: "Card was successfully created." }
-            format.turbo_stream
+            format.turbo_stream{ flash.now[:notice] = "Card was successfully created." }
           end
         else
           render :new, status: :unprocessable_entity
@@ -30,7 +30,10 @@ class CardsController < ApplicationController
     
     def update
         if @card.update(card_params)
-          redirect_to cards_path, notice: "Card was successfully updated."
+          respond_to do |format|
+            format.html { redirect_to cards_path, notice: "Card was successfully updated." }
+            format.turbo_stream { flash.now[:notice] = "Card was successfully updated." }
+          end
         else
           render :edit, status: :unprocessable_entity
         end
@@ -41,14 +44,14 @@ class CardsController < ApplicationController
 
         respond_to do |format|
           format.html { redirect_to cards_path, notice: "Card was successfully destroyed." }
-          format.turbo_stream
+          format.turbo_stream { flash.now[:notice] = "Card was successfully destroyed." }
         end
     end
     
     private
     
     def set_card
-        @card = Card.find(params[:id])
+        @card = current_company.cards.find(params[:id])
     end
     
     def card_params

@@ -4,6 +4,7 @@ require "application_system_test_case"
 
 class CardsTest < ApplicationSystemTestCase
   setup do
+    login_as users(:accountant)
     @card = Card.ordered.first # Reference to the first fixture card
   end
 

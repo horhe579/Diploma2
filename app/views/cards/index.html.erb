@@ -1,17 +1,18 @@
-<%= turbo_stream_from "cards" %>
-  <main class="container">
-      <div class="header">
-        <h1>Cards</h1>
-        <%= link_to "New card",
-                    new_card_path,
-                    class: "btn btn--primary" ,
-                    data: { turbo_frame: dom_id(Card.new) } %>
+<%= turbo_stream_from current_company, "cards" %>
 
-      </div>
+<div class="container">
+  <div class="header">
+    <h1>Cards</h1>
+    <%= link_to "New card",
+                new_card_path,
+                class: "btn btn--primary",
+                data: { turbo_frame: dom_id(Card.new) } %>
+  </div>
 
-    <%= turbo_frame_tag Card.new %>
+  <%= turbo_frame_tag Card.new %>
 
-    <%= turbo_frame_tag "cards" do %>
-      <%= render @cards %>
-    <% end %>
-  </main>
+  <%= turbo_frame_tag "cards" do %>
+    <%= render "cards/empty_state" %>
+    <%= render @cards %>
+  <% end %>
+</div>

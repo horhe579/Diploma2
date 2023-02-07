@@ -1,10 +1,13 @@
 # test/fixtures/files/cards.yml
 
 first:
+  company: kpmg
   name: First card
 
 second:
+  company: kpmg
   name: Second card
 
 third:
+  company: kpmg
   name: Third card
