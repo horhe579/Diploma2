@@ -10,12 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_03_131444) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_09_200602) do
   create_table "cards", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "company_id", null: false
+    t.integer "damage", default: 0
+    t.integer "shield", default: 0
+    t.integer "draw", default: 0
+    t.integer "play_again", default: 0
+    t.integer "heal", default: 0
+    t.string "image", default: "cards/sashostencil.png"
+    t.string "back_of_card", default: "cards/devil_back.png"
     t.index ["company_id"], name: "index_cards_on_company_id"
   end
 

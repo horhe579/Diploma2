@@ -3,16 +3,31 @@
 <div class="container">
   <div class="header">
     <h1>Cards</h1>
-    <%= link_to "New card",
-                new_card_path,
-                class: "btn btn--primary",
-                data: { turbo_frame: dom_id(Card.new) } %>
   </div>
 
   <%= turbo_frame_tag Card.new %>
 
   <%= turbo_frame_tag "cards" do %>
-    <%= render "cards/empty_state" %>
-    <%= render @cards %>
+    <div class="hand flex">
+
+      <div class="max-w-xxs mx-2 rounded-lg">
+          <% card = @cards.last %>
+          <%= image_tag card.back_of_card, alt: "Image of the back of the card.", class: "rounded-t-lg mb-none" %>
+      </div>
+
+      <div class="flex overflow-hidden hover:overflow-x-scroll rounded-lg">
+        <%= render @cards %>
+      </div>
+
+      <div class="draw">
+        <%= link_to "Draw",
+                    new_card_path,
+                    class: "btn btn--secondary",
+                    data: { turbo_frame: dom_id(Card.new) } %>
+      </div>
+
+    </div>
   <% end %>
+
+
 </div>
