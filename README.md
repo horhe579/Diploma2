@@ -11,3 +11,5 @@
   *yarn build --watch
   
   *yarn build:css --watch
+
+  *bin/rails tailwindcss:watch
