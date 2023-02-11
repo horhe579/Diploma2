@@ -7,9 +7,9 @@ class User < ApplicationRecord
 
   belongs_to :company
   
-  def name
-    email.split("@").first.capitalize
-  end
+  #def name
+  #  email.split("@").first.capitalize
+  #end
 end
 
 #  devise :database_authenticatable, :registerable,
