@@ -6,7 +6,7 @@
 
   *sudo service redis-server start
   
-  *rails/bin server
+  *bin/rails server
   
   *yarn build --watch
   
