@@ -1,5 +1,5 @@
 class GamesUser < ApplicationRecord
-    validates :user_id, presence: true
+    validates :user_id, presence: true, uniqueness: { scope: :game_id, message: "already has joined this game"}
 
     validates :game_id, presence: true
 

@@ -14,7 +14,13 @@ class GamesUsersController < ApplicationController
     @games_user = GamesUser.new(games_user_params.merge(user_id: current_user.id))
 
 
+    if current_user.game_id.present?
+      redirect_to game_path(current_user.game_id), alert: "You are already in another game."
+      return
+    end
+
     if @games_user.save
+      current_user.update(game_id: @games_user.game_id)
       respond_to do |format|
         format.html { redirect_to game_path(@games_user.game), notice: "Successfully joined game." }
         format.turbo_stream{ flash.now[:notice] = "Successfully joined game." }

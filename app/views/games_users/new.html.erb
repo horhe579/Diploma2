@@ -1,11 +1,12 @@
 <main class="container">
   <%= link_to sanitize("&larr; Back to home"), root_path %>
 
-  <div class="header">
-    <h1>Chose a deck</h1>
-  </div>
+  <% if GamesUser.where(game: @game, user: current_user).count == 0 %>
+    <div class="header">
+      <h1>Chose a deck</h1>
+    </div>
 
-    
-
-    <%= render "form" %>
+      
+      <%= render "form" %>
+  <% end %>
 </main>

@@ -23,7 +23,6 @@ class GamesController < ApplicationController
         end
 
         if @game.save
-            current_user.update(game_id: @game.id)
             redirect_to @game, notice: "Game was successfully created."
           else
             render :new, status: :unprocessable_entity
