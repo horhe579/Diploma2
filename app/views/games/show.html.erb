@@ -1,0 +1,32 @@
+<main class="container">
+  <%= link_to sanitize("&larr; Back to home"), root_path %>
+  <div class="header">
+    <h1>
+      Game <%= @game.id %>
+    </h1>
+    <p>
+      Current player count: <%= GamesUser.where(game: @game).count %>
+      <% if GamesUser.where(game: @game, user: current_user).count == 0 %>
+        <%= link_to "Join", new_games_user_path(game_id: @game.id), class: "btn btn--secondary" %>
+      <% else %>
+        Show game
+        HAPPY PATH
+      <% end %>
+    </p>
+    <p>
+      Available decks:
+      <% if @game.rogue %>
+        <span class="deck-available">Rogue</span>
+      <% end %>
+      <% if @game.wizard %>
+        <span class="deck-available">Wizard</span>
+      <% end %>
+      <% if @game.barbarian %>
+        <span class="deck-available">Barbarian</span>
+      <% end %>
+      <% if @game.paladin %>
+        <span class="deck-available">Paladin</span>
+      <% end %>
+    </p>
+  </div>
+</main>

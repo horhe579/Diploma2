@@ -1,0 +1,14 @@
+<%= simple_form_for game,
+                    html: {
+                      class: "game form",
+                      #data: { turbo: false }
+                    } do |f| %>  
+  <% if game.errors.any? %>
+    <div class="error-message">
+      <%= game.errors.full_messages.to_sentence.capitalize %>
+    </div>
+  <% end %>
+
+  
+  <%= f.submit class: "btn btn--secondary" %>
+<% end %>

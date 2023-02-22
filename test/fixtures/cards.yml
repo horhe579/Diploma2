@@ -12,157 +12,157 @@
     company: kpmg
     name: Third card
 
-#devil_deck:
-  devil_card1:
-    company: devil
+#rogue_deck:
+  rogue_card1:
+    company: rogue
     name: Clever Disguise
     image: cards/clever_disguise.png
 
-  devil_card2:
-    company: devil
+  rogue_card2:
+    company: rogue
     name: One Thrown Dagger
     damage: 1
     play_again: 1
     image: cards/one_thrown_dagger.png
 
-  devil_card3:
-    company: devil
+  rogue_card3:
+    company: rogue
     name: Sneak Attack!
     play_again: 1
     image: cards/sneak_attack.png
 
-  devil_card4:
-    company: devil
+  rogue_card4:
+    company: rogue
     name: All The Thrown Daggers
     damage: 3
     image: cards/all_the_thrown_daggers.png
 
-  devil_card5:
-    company: devil
+  rogue_card5:
+    company: rogue
     name: One Thrown Dagger
     damage: 1
     play_again: 1
     image: cards/one_thrown_dagger.png
 
-  devil_card6:
-    company: devil
+  rogue_card6:
+    company: rogue
     name: Stolen Potion
     play_again: 1
     heal: 1
     image: cards/stolen_potion.png
 
-  devil_card7:
-    company: devil
+  rogue_card7:
+    company: rogue
     name: Two Thrown Daggers
     damage: 2
     image: cards/two_thrown_daggers.png
 
-  devil_card8:
-    company: devil
+  rogue_card8:
+    company: rogue
     name: Pick Pocket
     image: cards/pick_pocket.png
 
-  devil_card9:
-    company: devil
+  rogue_card9:
+    company: rogue
     name: Winged Serpent
     shield: 1
     draw: 1
     image: cards/winged_serpent.png
 
-  devil_card10:
-    company: devil
+  rogue_card10:
+    company: rogue
     name: All The Thrown Daggers
     damage: 3
     image: cards/all_the_thrown_daggers.png
 
-  devil_card11:
-    company: devil
+  rogue_card11:
+    company: rogue
     name: Even More Daggers
     draw: 2
     heal: 1
     image: cards/even_more_daggers.png
 
-  devil_card12:
-    company: devil
+  rogue_card12:
+    company: rogue
     name: Stolen Potion
     play_again: 1
     heal: 1
     image: cards/stolen_potion.png
 
-  devil_card13:
-    company: devil
+  rogue_card13:
+    company: rogue
     name: The Goon Squad
     shield: 2
     image: cards/the_goon_squad.png
 
-  devil_card14:
-    company: devil
+  rogue_card14:
+    company: rogue
     name: Winged Serpent
     shield: 1
     draw: 1
     image: cards/winged_serpent.png
 
-  devil_card15:
-    company: devil
+  rogue_card15:
+    company: rogue
     name: Sneak Attack!
     play_again: 1
     image: cards/sneak_attack.png
 
-  devil_card16:
-    company: devil
+  rogue_card16:
+    company: rogue
     name: Pick Pocket
     image: cards/pick_pocket.png
 
-  devil_card17:
-    company: devil
+  rogue_card17:
+    company: rogue
     name: Two Thrown Daggers
     damage: 2
     image: cards/two_thrown_daggers.png
 
-  devil_card18:
-    company: devil
+  rogue_card18:
+    company: rogue
     name: All The Thrown Daggers
     damage: 3
     image: cards/all_the_thrown_daggers.png
 
-  devil_card19:
-    company: devil
+  rogue_card19:
+    company: rogue
     name: My Little Friend
     shield: 3
     image: cards/my_little_friend.png
 
-  devil_card20:
-    company: devil
+  rogue_card20:
+    company: rogue
     name: One Thrown Dagger
     damage: 1
     play_again: 1
     image: cards/one_thrown_dagger.png
 
-  devil_card21:
-    company: devil
+  rogue_card21:
+    company: rogue
     name: Clever Disguise
     image: cards/clever_disguise.png
 
-  devil_card22:
-    company: devil
+  rogue_card22:
+    company: rogue
     name: Cunning Action
     play_again: 2
     image: cards/cunning_action.png
 
-  devil_card23:
-    company: devil
+  rogue_card23:
+    company: rogue
     name: The Goon Squad
     shield: 2
     image: cards/the_goon_squad.png
 
-  devil_card24:
-    company: devil
+  rogue_card24:
+    company: rogue
     name: Two Thrown Daggers
     damage: 2
     image: cards/two_thrown_daggers.png
 
-  devil_card25:
-    company: devil
+  rogue_card25:
+    company: rogue
     name: One Thrown Dagger
     damage: 1
     play_again: 1

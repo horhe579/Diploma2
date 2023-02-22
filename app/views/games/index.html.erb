@@ -1,0 +1,10 @@
+<main class="container">
+  <div class="header">
+    <h1>Games</h1>
+    <%= link_to "New game",
+                new_game_path,
+                class: "btn btn--primary" %>
+  </div>
+
+  <%= render @games %>
+</main>

@@ -1,6 +1,6 @@
 class Company < ApplicationRecord
-    has_many :users, dependent: :destroy
-    has_many :cards, dependent: :destroy
+    has_many :users 
+    has_many :cards
 
     validates :name, presence: true
 end

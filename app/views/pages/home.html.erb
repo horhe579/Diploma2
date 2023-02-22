@@ -1,9 +1,10 @@
 <main class="container">
   <h1>Card game</h1>
-  <p>A blazing fast card displayer built with Hotwire</p>
 
   <% if user_signed_in? %>
-    <%= link_to "View cards", cards_path, class: "btn btn--dark" %>
+    <%= link_to "Create a new game", new_game_path, class: "btn btn--dark" %>
+    <%# link_to "View games", games_path, class: "btn btn--dark" %>
+    <%#= link_to "View cards", cards_path, class: "btn btn--dark" %>
   <% else %>
     <%= link_to "Sign in", new_user_session_path, class: "btn btn--dark" %>
   <% end %>

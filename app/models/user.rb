@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_one :game
+  #after_create :create_player
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -7,9 +9,7 @@ class User < ApplicationRecord
 
   belongs_to :company
   
-  #def name
-  #  email.split("@").first.capitalize
-  #end
+
 end
 
 #  devise :database_authenticatable, :registerable,

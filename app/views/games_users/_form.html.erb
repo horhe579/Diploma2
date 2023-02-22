@@ -1,0 +1,19 @@
+<%= simple_form_for @games_user,
+                    html: {
+                      class: "game form",
+                      data: { turbo: false }
+                    } do |f| %>  
+  <% if @games_user.errors.any? %>
+    <div class="error-message">
+      <%= @games_user.errors.full_messages.to_sentence.capitalize %>
+    </div>
+  <% end %>
+
+  
+    <%= f.hidden_field :game_id, value: @games_user.game_id || params[:game_id] %>
+
+
+    <%= f.collection_radio_buttons :company_id, Company.all, :id, :name %>
+  
+  <%= f.submit class: "btn btn--secondary" %>
+<% end %>

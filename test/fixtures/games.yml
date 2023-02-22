@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+#one:
+#  players: MyText
+#  player_count: 1
+#  rogue: false
+#  wizard: false
+#  paladin: false
+#  barbarian: false
+
+#two:
+#  players: MyText
+#  player_count: 1
+ # rogue: false
+  #wizard: false
+  #paladin: false
+  #barbarian: false
