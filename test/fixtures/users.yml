@@ -5,26 +5,31 @@
 # below each fixture, per the syntax in the comments below
 #
 accountant:
+  username: accountant
   company: kpmg
   email: accountant@kpmg.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
 
 manager:
+  username: manager
   company: kpmg
   email: manager@kpmg.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
 
 eavesdropper:
+  username: eavesdropper
   company: pwc
   email: eavesdropper@pwc.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
 
 temp_user:
+  username: temp
   company: rogue
   email: user@rogue.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
 
 temp_user2:
+  username: temp2
   company: rogue
   email: user2@rogue.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>

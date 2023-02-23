@@ -13,7 +13,10 @@
     <%= f.hidden_field :game_id, value: @games_user.game_id || params[:game_id] %>
 
 
-    <%= f.collection_radio_buttons :company_id, Company.all, :id, :name %>
+    <% game_users = GamesUser.where(game_id: @games_user.game_id || params[:game_id]) %>
+    <% taken_company_ids = game_users.pluck(:company_id).uniq %>
+    <% available_companies = Company.where.not(id: taken_company_ids) %>
+    <%= f.collection_radio_buttons :company_id, available_companies, :id, :name %>
   
   <%= f.submit "Join", class: "btn btn--secondary" %>
 <% end %>
