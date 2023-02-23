@@ -33,3 +33,21 @@ temp_user2:
   company: rogue
   email: user2@rogue.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+
+temp_user3:
+  username: temp3
+  company: wizard
+  email: user@wizard.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+
+temp_user4:
+  username: temp4
+  company: paladin
+  email: user@paladin.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+
+temp_user5:
+  username: temp5
+  company: barbarian
+  email: user@barbarian.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>

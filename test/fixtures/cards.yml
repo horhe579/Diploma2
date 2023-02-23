@@ -17,6 +17,7 @@
     company: rogue
     name: Clever Disguise
     image: cards/clever_disguise.png
+    back_of_card: cards/rogue_back.png
 
   rogue_card2:
     company: rogue
@@ -24,18 +25,21 @@
     damage: 1
     play_again: 1
     image: cards/one_thrown_dagger.png
+    back_of_card: cards/rogue_back.png
 
   rogue_card3:
     company: rogue
     name: Sneak Attack!
     play_again: 1
     image: cards/sneak_attack.png
+    back_of_card: cards/rogue_back.png
 
   rogue_card4:
     company: rogue
     name: All The Thrown Daggers
     damage: 3
     image: cards/all_the_thrown_daggers.png
+    back_of_card: cards/rogue_back.png
 
   rogue_card5:
     company: rogue
@@ -43,6 +47,7 @@
     damage: 1
     play_again: 1
     image: cards/one_thrown_dagger.png
+    back_of_card: cards/rogue_back.png
 
   rogue_card6:
     company: rogue
@@ -50,17 +55,20 @@
     play_again: 1
     heal: 1
     image: cards/stolen_potion.png
+    back_of_card: cards/rogue_back.png
 
   rogue_card7:
     company: rogue
     name: Two Thrown Daggers
     damage: 2
     image: cards/two_thrown_daggers.png
+    back_of_card: cards/rogue_back.png
 
   rogue_card8:
     company: rogue
     name: Pick Pocket
     image: cards/pick_pocket.png
+    back_of_card: cards/rogue_back.png
 
   rogue_card9:
     company: rogue
@@ -68,12 +76,14 @@
     shield: 1
     draw: 1
     image: cards/winged_serpent.png
+    back_of_card: cards/rogue_back.png
 
   rogue_card10:
     company: rogue
     name: All The Thrown Daggers
     damage: 3
     image: cards/all_the_thrown_daggers.png
+    back_of_card: cards/rogue_back.png
 
   rogue_card11:
     company: rogue
@@ -81,6 +91,7 @@
     draw: 2
     heal: 1
     image: cards/even_more_daggers.png
+    back_of_card: cards/rogue_back.png
 
   rogue_card12:
     company: rogue
@@ -88,12 +99,14 @@
     play_again: 1
     heal: 1
     image: cards/stolen_potion.png
+    back_of_card: cards/rogue_back.png
 
   rogue_card13:
     company: rogue
     name: The Goon Squad
     shield: 2
     image: cards/the_goon_squad.png
+    back_of_card: cards/rogue_back.png
 
   rogue_card14:
     company: rogue
@@ -101,35 +114,41 @@
     shield: 1
     draw: 1
     image: cards/winged_serpent.png
+    back_of_card: cards/rogue_back.png
 
   rogue_card15:
     company: rogue
     name: Sneak Attack!
     play_again: 1
     image: cards/sneak_attack.png
+    back_of_card: cards/rogue_back.png
 
   rogue_card16:
     company: rogue
     name: Pick Pocket
     image: cards/pick_pocket.png
+    back_of_card: cards/rogue_back.png
 
   rogue_card17:
     company: rogue
     name: Two Thrown Daggers
     damage: 2
     image: cards/two_thrown_daggers.png
+    back_of_card: cards/rogue_back.png
 
   rogue_card18:
     company: rogue
     name: All The Thrown Daggers
     damage: 3
     image: cards/all_the_thrown_daggers.png
+    back_of_card: cards/rogue_back.png
 
   rogue_card19:
     company: rogue
     name: My Little Friend
     shield: 3
     image: cards/my_little_friend.png
+    back_of_card: cards/rogue_back.png
 
   rogue_card20:
     company: rogue
@@ -137,29 +156,34 @@
     damage: 1
     play_again: 1
     image: cards/one_thrown_dagger.png
+    back_of_card: cards/rogue_back.png
 
   rogue_card21:
     company: rogue
     name: Clever Disguise
     image: cards/clever_disguise.png
+    back_of_card: cards/rogue_back.png
 
   rogue_card22:
     company: rogue
     name: Cunning Action
     play_again: 2
     image: cards/cunning_action.png
+    back_of_card: cards/rogue_back.png
 
   rogue_card23:
     company: rogue
     name: The Goon Squad
     shield: 2
     image: cards/the_goon_squad.png
+    back_of_card: cards/rogue_back.png
 
   rogue_card24:
     company: rogue
     name: Two Thrown Daggers
     damage: 2
     image: cards/two_thrown_daggers.png
+    back_of_card: cards/rogue_back.png
 
   rogue_card25:
     company: rogue
@@ -167,3 +191,636 @@
     damage: 1
     play_again: 1
     image: cards/one_thrown_dagger.png
+    back_of_card: cards/rogue_back.png
+
+  rogue_card26:
+    company: rogue
+    name: One Thrown Dagger
+    damage: 1
+    play_again: 1
+    image: cards/one_thrown_dagger.png
+    back_of_card: cards/rogue_back.png
+
+  rogue_card27:
+    company: rogue
+    name: Two Thrown Daggers
+    damage: 2
+    image: cards/two_thrown_daggers.png
+    back_of_card: cards/rogue_back.png
+
+  rogue_card28:
+    company: rogue
+    name: Cunning Action
+    play_again: 2
+    image: cards/cunning_action.png
+    back_of_card: cards/rogue_back.png
+
+
+#wizard_deck:
+  wizard_card1:
+    company: wizard
+    name: Fireball
+    image: cards/fireball.png
+    back_of_card: cards/wizard_back.png
+
+  wizard_card2:
+    company: wizard
+    name: Burning Hands
+    damage: 2
+    image: cards/burning_hands.png
+    back_of_card: cards/wizard_back.png
+
+  wizard_card3:
+    company: wizard
+    name: Knowledge Is Power
+    draw: 3
+    image: cards/knowledge_is_power.png
+    back_of_card: cards/wizard_back.png
+
+  wizard_card4:
+    company: wizard
+    name: Magic Missile
+    damage: 1
+    play_again: 1
+    image: cards/magic_missile.png
+    back_of_card: cards/wizard_back.png
+
+  wizard_card5:
+    company: wizard
+    name: Evil Sneer
+    heal: 1 
+    play_again: 1
+    image: cards/evil_sneer.png
+    back_of_card: cards/wizard_back.png
+
+  wizard_card6:
+    company: wizard
+    name: Vampiric Touch
+    image: cards/vampiric_touch.png
+    back_of_card: cards/wizard_back.png
+
+  wizard_card7:
+    company: wizard
+    name: Vampiric Touch
+    image: cards/vampiric_touch.png
+    back_of_card: cards/wizard_back.png
+
+  wizard_card8:
+    company: wizard
+    name: Stoneskin
+    shield: 2
+    image: cards/stoneskin.png
+    back_of_card: cards/wizard_back.png
+
+  wizard_card9:
+    company: wizard
+    name: Lightning Bolt
+    damage: 3
+    image: cards/lightning_bolt.png
+    back_of_card: cards/wizard_back.png
+
+  wizard_card10:
+    company: wizard
+    name: Lightning Bolt
+    damage: 3
+    image: cards/lightning_bolt.png
+    back_of_card: cards/wizard_back.png
+
+  wizard_card11:
+    company: wizard
+    name: Lightning Bolt
+    damage: 3
+    image: cards/lightning_bolt.png
+    back_of_card: cards/wizard_back.png
+
+  wizard_card12:
+    company: wizard
+    name: Knowledge Is Power
+    draw: 3
+    image: cards/knowledge_is_power.png
+    back_of_card: cards/wizard_back.png
+
+  wizard_card13:
+    company: wizard
+    name: Speed Of Thought
+    draw: 2
+    image: cards/speed_of_thought.png
+    back_of_card: cards/wizard_back.png
+
+  wizard_card14:
+    company: wizard
+    name: Shield
+    shield: 1
+    draw: 1
+    image: cards/shield.png
+    back_of_card: cards/wizard_back.png
+
+  wizard_card15:
+    company: wizard
+    name: Magic Missile
+    damage: 1
+    play_again: 1
+    image: cards/magic_missile.png
+    back_of_card: cards/wizard_back.png
+
+  wizard_card16:
+    company: wizard
+    name: Mirror Image
+    shield: 3
+    image: cards/mirror_image.png
+    back_of_card: cards/wizard_back.png
+
+  wizard_card17:
+    company: wizard
+    name: Lightning Bolt
+    damage: 3
+    image: cards/lightning_bolt.png
+    back_of_card: cards/wizard_back.png
+
+  wizard_card18:
+    company: wizard
+    name: Charm
+    image: cards/charm.png
+    back_of_card: cards/wizard_back.png
+
+  wizard_card19:
+    company: wizard
+    name: Evil Sneer
+    heal: 1
+    play_again: 1
+    image: cards/evil_sneer.png
+    back_of_card: cards/wizard_back.png
+
+  wizard_card20:
+    company: wizard
+    name: Speed Of Thought
+    play_again: 2
+    image: cards/speed_of_thought.png
+    back_of_card: cards/wizard_back.png
+
+  wizard_card21:
+    company: wizard
+    name: Burning Hands
+    damage: 2
+    image: cards/burning_hands.png
+    back_of_card: cards/wizard_back.png
+
+  wizard_card22:
+    company: wizard
+    name: Burning Hands
+    damage: 2
+    image: cards/burning_hands.png
+    back_of_card: cards/wizard_back.png
+
+  wizard_card23:
+    company: wizard
+    name: Fireball
+    image: cards/fireball.png
+    back_of_card: cards/wizard_back.png
+
+  wizard_card24:
+    company: wizard
+    name: Charm
+    image: cards/charm.png
+    back_of_card: cards/wizard_back.png
+
+  wizard_card25:
+    company: wizard
+    name: Knowledge Is Power
+    draw: 3
+    image: cards/knowledge_is_power.png
+    back_of_card: cards/wizard_back.png
+
+  wizard_card26:
+    company: wizard
+    name: Shield
+    shield: 1
+    draw: 1
+    image: cards/shield.png
+    back_of_card: cards/wizard_back.png
+
+  wizard_card27:
+    company: wizard
+    name: Magic Missile
+    damage: 1
+    play_again: 1
+    image: cards/magic_missile.png
+    back_of_card: cards/wizard_back.png
+
+  wizard_card28:
+    company: wizard
+    name: Speed Of Thought
+    play_again: 2
+    image: cards/speed_of_thought.png
+    back_of_card: cards/wizard_back.png
+
+
+#paladin_deck:
+  paladin_card1:
+    company: paladin
+    name: For Even More Justice!
+    damage: 2
+    image: cards/for_even_more_justice.png
+    back_of_card: cards/paladin_back.png
+
+  paladin_card2:
+    company: paladin
+    name: Fighting Words
+    damage: 2
+    heal: 1
+    image: cards/fighting_words.png
+    back_of_card: cards/paladin_back.png
+
+  paladin_card3:
+    company: paladin
+    name: Divine Inspiration
+    heal: 2
+    image: cards/divine_inspiration.png
+    back_of_card: cards/paladin_back.png
+
+  paladin_card4:
+    company: paladin
+    name: Divine Shield
+    shield: 3
+    image: cards/divine_shield.png
+    back_of_card: cards/paladin_back.png
+
+  paladin_card5:
+    company: paladin
+    name: For Even More Justice!
+    damage: 2
+    image: cards/for_even_more_justice.png
+    back_of_card: cards/paladin_back.png
+
+  paladin_card6:
+    company: paladin
+    name: For Even More Justice!
+    damage: 2
+    image: cards/for_even_more_justice.png
+    back_of_card: cards/paladin_back.png
+
+  paladin_card7:
+    company: paladin
+    name: Divine Shield
+    shield: 3
+    image: cards/divine_shield.png
+    back_of_card: cards/paladin_back.png
+
+  paladin_card8:
+    company: paladin
+    name: Spinning Parry
+    shield: 1
+    draw: 1
+    image: cards/spinning_parry.png
+    back_of_card: cards/paladin_back.png
+
+  paladin_card9:
+    company: paladin
+    name: For Justice!
+    damage: 1
+    play_again: 1
+    image: cards/for_justice.png
+    back_of_card: cards/paladin_back.png
+
+  paladin_card10:
+    company: paladin
+    name: Finger-Wag Of Judgment
+    play_again: 2
+    image: cards/finger-wag_of_judgment.png
+    back_of_card: cards/paladin_back.png
+
+  paladin_card11:
+    company: paladin
+    name: High Charisma
+    draw: 2
+    image: cards/high_charisma.png
+    back_of_card: cards/paladin_back.png
+
+  paladin_card12:
+    company: paladin
+    name: Fluffy
+    shield: 2
+    image: cards/fluffy.png
+    back_of_card: cards/paladin_back.png
+
+  paladin_card13:
+    company: paladin
+    name: For Even More Justice!
+    damage: 2
+    image: cards/for_even_more_justice.png
+    back_of_card: cards/paladin_back.png
+
+  paladin_card14:
+    company: paladin
+    name: For Justice!
+    damage: 1
+    play_again: 1
+    image: cards/for_justice.png
+    back_of_card: cards/paladin_back.png
+
+  paladin_card15:
+    company: paladin
+    name: Divine Smite
+    damage: 3
+    heal: 1
+    image: cards/divine_smite.png
+    back_of_card: cards/paladin_back.png
+
+  paladin_card16:
+    company: paladin
+    name: Divine Smite
+    damage: 3
+    heal: 1
+    image: cards/divine_smite.png
+    back_of_card: cards/paladin_back.png
+
+  paladin_card17:
+    company: paladin
+    name: High Charisma
+    draw: 2
+    image: cards/high_charisma.png
+    back_of_card: cards/paladin_back.png
+
+  paladin_card18:
+    company: paladin
+    name: Divine Smite
+    damage: 3
+    heal: 1
+    image: cards/divine_smite.png
+    back_of_card: cards/paladin_back.png
+
+  paladin_card19:
+    company: paladin
+    name: Finger-Wag Of Judgment
+    play_again: 2
+    image: cards/finger-wag_of_judgment.png
+    back_of_card: cards/paladin_back.png
+
+  paladin_card20:
+    company: paladin
+    name: Fighting Words
+    damage: 2
+    heal: 1
+    image: cards/fighting_words.png
+    back_of_card: cards/paladin_back.png
+
+  paladin_card21:
+    company: paladin
+    name: For The Most Justice!
+    damage: 3
+    image: cards/for_the_most_justice.png
+    back_of_card: cards/paladin_back.png
+
+  paladin_card22:
+    company: paladin
+    name: For The Most Justice!
+    damage: 3
+    image: cards/for_the_most_justice.png
+    back_of_card: cards/paladin_back.png
+
+  paladin_card23:
+    company: paladin
+    name: Banishing Smite
+    image: cards/banishing_smite.png
+    back_of_card: cards/paladin_back.png
+
+  paladin_card24:
+    company: paladin
+    name: For Justice!
+    damage: 1
+    play_again: 1
+    image: cards/for_justice.png
+    back_of_card: cards/paladin_back.png
+
+  paladin_card25:
+    company: paladin
+    name: Fighting Words
+    damage: 2
+    heal: 1
+    image: cards/fighting_words.png
+    back_of_card: cards/paladin_back.png
+
+  paladin_card26:
+    company: paladin
+    name: Spinning Parry
+    shield: 1
+    draw: 1
+    image: cards/spinning_parry.png
+    back_of_card: cards/paladin_back.png
+
+  paladin_card27:
+    company: paladin
+    name: Cure Wounds
+    heal: 1
+    draw: 2
+    image: cards/cure_wounds.png
+    back_of_card: cards/paladin_back.png
+
+  paladin_card28:
+    company: paladin
+    name: Divine Inspiration
+    heal: 2
+    image: cards/divine_inspiration.png
+    back_of_card: cards/paladin_back.png
+
+
+#barbarian_deck:
+  barbarian_card1:
+    company: barbarian
+    name: Brutal Punch!
+    damage: 2
+    image: cards/brutal_punch.png
+    back_of_card: cards/barbarian_back.png
+
+  barbarian_card2:
+    company: barbarian
+    name: Big Axe Is Best Axe
+    damage: 3
+    image: cards/big_axe_is_best_axe.png
+    back_of_card: cards/barbarian_back.png
+
+  barbarian_card3:
+    company: barbarian
+    name: Rage!
+    damage: 4
+    image: cards/rage.png
+    back_of_card: cards/barbarian_back.png
+
+  barbarian_card4:
+    company: barbarian
+    name: Two Axes Are Better Than One
+    play_again: 2
+    image: cards/two_axes_are_better_than_one.png
+    back_of_card: cards/barbarian_back.png
+
+  barbarian_card5:
+    company: barbarian
+    name: Two Axes Are Better Than One
+    play_again: 2
+    image: cards/two_axes_are_better_than_one.png
+    back_of_card: cards/barbarian_back.png
+
+  barbarian_card6:
+    company: barbarian
+    name: Mighty Toss
+    draw: 1
+    image: cards/mighty_toss.png
+    back_of_card: cards/barbarian_back.png
+
+  barbarian_card7:
+    company: barbarian
+    name: Big Axe Is Best Axe
+    damage: 3
+    image: cards/big_axe_is_best_axe.png
+    back_of_card: cards/barbarian_back.png
+
+  barbarian_card8:
+    company: barbarian
+    name: Big Axe Is Best Axe
+    damage: 3
+    image: cards/big_axe_is_best_axe.png
+    back_of_card: cards/barbarian_back.png
+
+  barbarian_card9:
+    company: barbarian
+    name: Rage!
+    damage: 4
+    image: cards/rage.png
+    back_of_card: cards/barbarian_back.png
+
+  barbarian_card10:
+    company: barbarian
+    name: Riff
+    shield: 3
+    image: cards/riff.png
+    back_of_card: cards/barbarian_back.png
+
+  barbarian_card11:
+    company: barbarian
+    name: Open The Armory
+    draw: 2
+    image: cards/open_the_armory.png
+    back_of_card: cards/barbarian_back.png
+
+  barbarian_card12:
+    company: barbarian
+    name: Snack Time
+    draw: 2
+    heal: 1
+    image: cards/snack_time.png
+    back_of_card: cards/barbarian_back.png
+
+  barbarian_card13:
+    company: barbarian
+    name: Head Butt
+    damage: 1
+    play_again: 1
+    image: cards/head_butt.png
+    back_of_card: cards/barbarian_back.png
+
+  barbarian_card14:
+    company: barbarian
+    name: Whirling Axes
+    image: cards/whirling_axes.png
+    back_of_card: cards/barbarian_back.png
+
+  barbarian_card15:
+    company: barbarian
+    name: Flex!
+    draw: 1
+    heal: 1
+    image: cards/flex.png
+    back_of_card: cards/barbarian_back.png
+
+  barbarian_card16:
+    company: barbarian
+    name: Flex!
+    draw: 1
+    heal: 1
+    image: cards/flex.png
+    back_of_card: cards/barbarian_back.png
+
+  barbarian_card17:
+    company: barbarian
+    name: Bag Of Rats
+    shield: 1
+    draw: 1
+    image: cards/bag_of_rats.png
+    back_of_card: cards/barbarian_back.png
+
+  barbarian_card18:
+    company: barbarian
+    name: Open The Armory
+    draw: 2
+    image: cards/open_the_armory.png
+    back_of_card: cards/barbarian_back.png
+
+  barbarian_card19:
+    company: barbarian
+    name: Raff
+    shield: 3
+    image: cards/raff.png
+    back_of_card: cards/barbarian_back.png
+
+  barbarian_card20:
+    company: barbarian
+    name: Battle Roar
+    play_again: 1
+    image: cards/battle_roar.png
+    back_of_card: cards/barbarian_back.png
+
+  barbarian_card21:
+    company: barbarian
+    name: Battle Roar
+    play_again: 1
+    image: cards/battle_roar.png
+    back_of_card: cards/barbarian_back.png
+
+  barbarian_card22:
+    company: barbarian
+    name: Spiked Shield
+    shield: 2
+    image: cards/spiked_shield.png
+    back_of_card: cards/barbarian_back.png
+
+  barbarian_card23:
+    company: barbarian
+    name: Big Axe Is Best Axe
+    damage: 3
+    image: cards/big_axe_is_best_axe.png
+    back_of_card: cards/barbarian_back.png
+
+  barbarian_card24:
+    company: barbarian
+    name: Mighty Toss
+    draw: 1
+    image: cards/mighty_toss.png
+    back_of_card: cards/barbarian_back.png
+
+  barbarian_card25:
+    company: barbarian
+    name: Big Axe Is Best Axe
+    damage: 3
+    image: cards/big_axe_is_best_axe.png
+    back_of_card: cards/barbarian_back.png
+
+  barbarian_card26:
+    company: barbarian
+    name: Brutal Punch!
+    damage: 2
+    image: cards/brutal_punch.png
+    back_of_card: cards/barbarian_back.png
+
+  barbarian_card27:
+    company: barbarian
+    name: Head Butt
+    damage: 1
+    play_again: 1
+    image: cards/head_butt.png
+    back_of_card: cards/barbarian_back.png
+
+  barbarian_card28:
+    company: barbarian
+    name: Whirling Axes
+    image: cards/whirling_axes.png
+    back_of_card: cards/barbarian_back.png

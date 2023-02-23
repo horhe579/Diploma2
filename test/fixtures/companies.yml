@@ -8,3 +8,12 @@ pwc:
 
 rogue:
   name: Rogue Deck
+
+wizard:
+  name: Wizard Deck
+
+paladin:
+  name: Paladin Deck
+
+barbarian:
+  name: Barbarian Deck
