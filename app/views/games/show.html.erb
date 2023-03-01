@@ -1,24 +1,27 @@
 <main class="container">
   <%= link_to sanitize("&larr; Back to home"), root_path %>
   <div class="header">
-    <h1>
-      Game <%= @game.id %>
-    </h1>
-    <p>
-      Current player count: <%= GamesUser.where(game: @game).count %>
-      <% if GamesUser.where(game: @game).count < 4 && GamesUser.where(game: @game, user: current_user).count == 0  %>
-        <%= link_to "Join", new_games_user_path(game_id: @game.id), class: "btn btn--secondary" %>
-      <% else %>
-        Show game
-        HAPPY PATH
-      <% end %>
-    </p>
+    <% if GamesUser.where(game: @game, user: current_user).count == 0 %>
+      <h1>
+        Game <%= @game.id %>
+      </h1>
 
-    <p>
-      Taken decks:
-      <% Company.where(id: @game.games_users.pluck(:company_id)).each do |company| %>
-        <span class="deck-taken"><%= company.name %></span>
-      <% end %>
-    </p>
+      <p>
+        Current player count: <%= GamesUser.where(game: @game).count %>
+        <% if GamesUser.where(game: @game).count < 4 %>
+          <%= link_to "Join", new_games_user_path(game_id: @game.id), class: "btn btn--secondary" %>
+          <p>
+            Taken decks:
+            <% Company.where(id: @game.games_users.pluck(:company_id)).each do |company| %>
+              <span class="deck-taken"><%= company.name %></span>
+            <% end %>
+          </p>
+        <% end %>
+      </p>
+      <%# KOGATO IGRACHITE SE PRISAEDINQVAT KUM IGRATA I NE SA PULEN SUSTAV SE RENDERVA NESHTO, NO NE ZNAM KAKVO. NAPRAVI EMPTY STATE %>
+    <% elsif GamesUser.where(game: @game, user: current_user).count == 1 && GamesUser.where(game: @game).count == 4%>
+        <%= render "games/play" %>
+    <% end %>
+
   </div>
 </main>

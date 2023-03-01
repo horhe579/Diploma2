@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_one :game
+  has_many :games_users
   #after_create :create_player
 
   # Include default devise modules. Others available are:

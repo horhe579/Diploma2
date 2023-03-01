@@ -12,6 +12,8 @@ class GamesUsersController < ApplicationController
 
   def create
     @games_user = GamesUser.new(games_user_params.merge(user_id: current_user.id))
+    @games_user.hp = 10
+    #put default values in model not here
 
 
     if current_user.game_id.present?
@@ -21,6 +23,7 @@ class GamesUsersController < ApplicationController
 
     if @games_user.save
       current_user.update(game_id: @games_user.game_id)
+      current_user.update(company_id: @games_user.company_id)
       respond_to do |format|
         format.html { redirect_to game_path(@games_user.game), notice: "Successfully joined game." }
         format.turbo_stream{ flash.now[:notice] = "Successfully joined game." }

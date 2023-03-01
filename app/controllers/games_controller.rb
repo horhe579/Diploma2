@@ -1,6 +1,5 @@
 class GamesController < ApplicationController
-    before_action :set_game, only: [:show, :edit, :destroy]
-
+    before_action :set_game, only: [:show, :edit, :destroy, :setup_game, :play]
 
     def new
         @game = Game.new
@@ -8,19 +7,6 @@ class GamesController < ApplicationController
 
     def create 
         @game = Game.new(user_id: current_user.id)
-
-        @game.last_selected_deck = params[:last_selected_deck]
-
-        case @game.last_selected_deck
-            when "Rogue"
-                @game.rogue = false
-            when "Wizard"
-                @game.wizard = false
-            when "Paladin"
-                @game.paladin = false
-            when "Barbarian"
-                @game.barbarian = false
-        end
 
         if @game.save
             redirect_to @game, notice: "Game was successfully created."
@@ -30,12 +16,18 @@ class GamesController < ApplicationController
     end
       
     def show
+        if @game.games_users.count == 4
+            render "games/_play" #partial
+        else
+            render "games/show"
+        end
     end
 
     def destroy
         @game.destroy
         redirect_to games_path, notice: "Game was successfully destroyed."
     end
+
       
     private
     

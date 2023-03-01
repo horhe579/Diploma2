@@ -11,7 +11,27 @@
               <h5 class="mb-0 text-base font-bold tracking-tight text-gray-900 dark:text-black"><%=card.name%></h5>
           </div>
           <div class="px-2 py-0 text-center flex flex-col justify-center">
-            <p class="mb-0 font-normal text-gray-700 dark:text-gray-700">Damage:<%=card.damage%><br>Shield:<%=card.shield%><br>Draw:<%=card.draw%><br>Play Again:<%=card.play_again%><br>Heal:<%=card.heal%></p>
+            <p class="mb-0 font-normal text-gray-700 dark:text-gray-700">
+            <%if card.damage != 0%>
+              Damage:<%=card.damage%>
+              <br>
+            <% end %>
+            <%if card.shield != 0%>
+              Shield:<%=card.shield%>
+              <br>
+            <% end %>
+            <%if card.draw != 0%>
+              Draw:<%=card.draw%>
+              <br>
+            <% end %>
+            <%if card.play_again != 0%>
+              Play Again:<%=card.play_again%>
+              <br>
+            <% end %>
+            <%if card.heal != 0%>
+              Heal:<%=card.heal%>
+            <% end %>
+            </p>
             <a href="#" class="inline-flex items-center px-3 py-2 text-xl font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 <%#play%>
             </a>
