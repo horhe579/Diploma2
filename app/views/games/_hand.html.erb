@@ -1,0 +1,25 @@
+<div class="container">
+<%= turbo_frame_tag "cards" do %>
+  <% @cards = current_user.company.cards %>
+    <div class="hand flex">
+
+      <div class="py-10 max-w-xxs mx-2 rounded-lg">
+          <% card = @cards.last %>
+          <%= image_tag card.back_of_card, alt: "Image of the back of the card.", class: "rounded-t-lg mb-none" %>
+      </div>
+
+      <div class="py-10 flex overflow-hidden hover:overflow-x-scroll rounded-lg">
+        <%= render @cards %>
+      </div>
+
+      <%= turbo_frame_tag "draw_card_frame" do %>
+        <div class="px-2 py-10 draw">
+              <%= link_to "Draw",
+                      new_dealt_path(game_id: @game.id),
+                      class: "btn btn--secondary",
+                      data: { turbo_frame: dom_id(Card.new) } %>
+        </div>
+      <% end %>
+
+    </div>
+<% end %>

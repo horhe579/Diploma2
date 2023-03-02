@@ -10,18 +10,18 @@
   <%= turbo_frame_tag "cards" do %>
     <div class="hand flex">
 
-      <div class="max-w-xxs mx-2 rounded-lg">
+      <div class="py-10 max-w-xxs mx-2 rounded-lg">
           <% card = @cards.last %>
           <%= image_tag card.back_of_card, alt: "Image of the back of the card.", class: "rounded-t-lg mb-none" %>
       </div>
 
-      <div class="flex overflow-hidden hover:overflow-x-scroll rounded-lg">
+      <div class="py-10 flex overflow-hidden hover:overflow-x-scroll rounded-lg">
         <%= render @cards %>
       </div>
 
-      <div class="draw">
+      <div class="px-2 py-10 draw">
         <%= link_to "Draw",
-                    new_card_path,
+                    new_dealts_path,
                     class: "btn btn--secondary",
                     data: { turbo_frame: dom_id(Card.new) } %>
       </div>

@@ -1,0 +1,2 @@
+module DealtsHelper
+end

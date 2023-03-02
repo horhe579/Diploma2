@@ -1,4 +1,5 @@
 class GamesUsersController < ApplicationController
+
   def index
   end
 
@@ -12,7 +13,7 @@ class GamesUsersController < ApplicationController
 
   def create
     @games_user = GamesUser.new(games_user_params.merge(user_id: current_user.id))
-    @games_user.hp = 10
+    #@games_user.hp = 10
     #put default values in model not here
 
 

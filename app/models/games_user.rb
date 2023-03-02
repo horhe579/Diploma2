@@ -9,7 +9,9 @@ class GamesUser < ApplicationRecord
     belongs_to :game
     belongs_to :company
 
+    after_initialize :set_defaults
     after_create :setup_game
+
 
     #validate uniqueness of za da ne moje da joinva edin user 2 puti
     #kakto i da se pokazva formata samo ako ne si v dadenata igra
@@ -24,11 +26,13 @@ class GamesUser < ApplicationRecord
                     Dealt.create(games_user: player, card: card)
                 end
             end
-        else
-            #do nothing
         end   
 
     end
 
+    def set_defaults
+        self.hp = 10
+        self.shield = 0
+    end
   
 end

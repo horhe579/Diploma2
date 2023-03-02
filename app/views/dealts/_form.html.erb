@@ -1,0 +1,28 @@
+<%= simple_form_for @dealt,
+                    html: {
+                      class: "dealt form",
+                      data: { turbo: false },
+                    } do |f| %>  
+  <% if @dealt.errors.any? %>
+    <div class="error-message">
+      <%= @dealt.errors.full_messages.to_sentence.capitalize %>
+    </div>
+  <% end %>
+
+    <% user = GamesUser.find_by(user_id: current_user.id, game_id: params[:game_id]) %>
+    <%= f.hidden_field :games_user_id, value: user.id %>
+
+    <% dealt_cards = Dealt.where(games_user: user).pluck(:card_id) %>
+    <% available_cards = current_user.company.cards.where.not(id: dealt_cards) %>
+
+
+    <% if Dealt.where(games_user: user).count < current_user.company.cards.count %>
+      <%= f.hidden_field :card_id, value: available_cards.sample.id %>
+      <%= f.submit "Draw", class: "btn btn--secondary" %>
+    <% else %>
+      <button disabled class="bg-gray-300 text-gray-500 cursor-not-allowed px-5 py-2 rounded-md text-sm font-medium">
+        Draw
+      </button>
+    <% end %>
+
+<% end %>
