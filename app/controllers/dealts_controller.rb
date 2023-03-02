@@ -33,6 +33,8 @@ class DealtsController < ApplicationController
     
     def update
     end
+
+    private
     
     def dealts_params
         params.require(:dealt).permit(:card_id, :games_user_id)

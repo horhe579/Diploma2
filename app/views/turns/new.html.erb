@@ -1,0 +1,14 @@
+
+<main class="container">
+  <%= link_to sanitize("&larr; Back to home"), root_path %>
+    <%= params[:game_id] %>
+
+  <div class="header">
+    <h1>Play a card</h1>
+  </div>
+
+    
+  <%= turbo_frame_tag "play_card_frame" do %>
+    <%= render "form", game: @turn %>
+  <% end %>
+</main>

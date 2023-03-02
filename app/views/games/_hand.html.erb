@@ -16,8 +16,7 @@
         <div class="px-2 py-10 draw">
               <%= link_to "Draw",
                       new_dealt_path(game_id: @game.id),
-                      class: "btn btn--secondary",
-                      data: { turbo_frame: dom_id(Card.new) } %>
+                      class: "btn btn--secondary"%>
         </div>
       <% end %>
 

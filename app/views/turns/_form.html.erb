@@ -1,0 +1,19 @@
+<%= simple_form_for @turn,
+                    html: {
+                      class: "turn form",
+                      data: { turbo: false },
+                    } do |f| %>  
+  <% if @turn.errors.any? %>
+    <div class="error-message">
+      <%= @turn.errors.full_messages.to_sentence.capitalize %>
+    </div>
+  <% end %>
+
+    <% user = GamesUser.find_by(user_id: current_user.id, game_id: params[:game_id]) %>
+    <%#= f.hidden_field :games_user_id, value: user.id %>
+
+
+      <%= f.hidden_field :card_id, value: params[:card_id] %>
+      <%= f.submit "Play", class: "btn btn--secondary" %>
+
+<% end %>
