@@ -1,12 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-#one:
-#  players: MyText
-#  player_count: 1
-#  rogue: false
-#  wizard: false
-#  paladin: false
-#  barbarian: false
+one:
+  rogue: false
+  wizard: false
+  paladin: false
+  barbarian: false
+  user_id: '975447484'
 
 #two:
 #  players: MyText

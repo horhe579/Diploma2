@@ -16,6 +16,16 @@ class GamesUser < ApplicationRecord
     #validate uniqueness of za da ne moje da joinva edin user 2 puti
     #kakto i da se pokazva formata samo ako ne si v dadenata igra
 
+    def in_hand
+        played_card_ids = Turn.where(games_user_id: id).pluck(:card_id)
+        drawn_card_ids = Dealt.where(games_user_id: id).pluck(:card_id)
+        drawn_cards = Card.where(id: drawn_card_ids)
+        played_cards = Card.where(id: played_card_ids)
+      
+        cards_in_hand = drawn_cards - played_cards
+        cards_in_hand.pluck(:id)
+    end
+
     def is_current_turn?
         players = GamesUser.where(game_id: self.game_id).order(:created_at).to_a
         my_position = players.index_of(self)

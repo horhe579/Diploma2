@@ -1,21 +1,11 @@
 # test/fixtures/files/cards.yml
 
-  first:
-    company: kpmg
-    name: First card
-
-  second:
-    company: kpmg
-    name: Second card
-
-  third:
-    company: kpmg
-    name: Third card
-
 #rogue_deck:
   rogue_card1:
     company: rogue
     name: Clever Disguise
+    damage: 1
+    heal: 1
     image: cards/clever_disguise.png
     back_of_card: cards/rogue_back.png
 
@@ -67,6 +57,7 @@
   rogue_card8:
     company: rogue
     name: Pick Pocket
+    draw: 2
     image: cards/pick_pocket.png
     back_of_card: cards/rogue_back.png
 
@@ -126,6 +117,7 @@
   rogue_card16:
     company: rogue
     name: Pick Pocket
+    draw: 2
     image: cards/pick_pocket.png
     back_of_card: cards/rogue_back.png
 
@@ -161,6 +153,8 @@
   rogue_card21:
     company: rogue
     name: Clever Disguise
+    damage: 1
+    heal: 1
     image: cards/clever_disguise.png
     back_of_card: cards/rogue_back.png
 
@@ -220,6 +214,7 @@
   wizard_card1:
     company: wizard
     name: Fireball
+    damage: 3
     image: cards/fireball.png
     back_of_card: cards/wizard_back.png
 
@@ -256,12 +251,16 @@
   wizard_card6:
     company: wizard
     name: Vampiric Touch
+    heal: 2
+    damage: 1
     image: cards/vampiric_touch.png
     back_of_card: cards/wizard_back.png
 
   wizard_card7:
     company: wizard
     name: Vampiric Touch
+    heal: 2
+    damage: 1
     image: cards/vampiric_touch.png
     back_of_card: cards/wizard_back.png
 
@@ -340,6 +339,8 @@
   wizard_card18:
     company: wizard
     name: Charm
+    draw: 1
+    damage: 2
     image: cards/charm.png
     back_of_card: cards/wizard_back.png
 
@@ -375,12 +376,15 @@
   wizard_card23:
     company: wizard
     name: Fireball
+    damage: 3
     image: cards/fireball.png
     back_of_card: cards/wizard_back.png
 
   wizard_card24:
     company: wizard
     name: Charm
+    draw: 1
+    damage: 2
     image: cards/charm.png
     back_of_card: cards/wizard_back.png
 

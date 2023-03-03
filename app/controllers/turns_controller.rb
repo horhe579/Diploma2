@@ -13,7 +13,7 @@ class TurnsController < ApplicationController
       @turn = Turn.new(turns_params.merge(games_user_id: user.id, card_id: params[:turn][:card_id]))
       if @turn.save
         respond_to do |format|
-          format.html { redirect_to game_path(current_user.game_id), notice: "You drew one card." }
+          format.html { redirect_to game_path(current_user.game_id), notice: "You played a card." }
           format.turbo_stream do
             render turbo_stream: turbo_stream.append(
               "play_card_frame",
