@@ -9,14 +9,13 @@
     </div>
   <% end %>
 
-    <% user = GamesUser.find_by(user_id: current_user.id, game_id: params[:game_id]) %>
-    <%= f.hidden_field :games_user_id, value: user.id %>
+    <%= f.hidden_field :games_user_id %>
 
-    <% dealt_cards = Dealt.where(games_user: user).pluck(:card_id) %>
+    <% dealt_cards = Dealt.where(games_user: @dealt.games_user_id).pluck(:card_id) %>
     <% available_cards = current_user.company.cards.where.not(id: dealt_cards) %>
 
 
-    <% if Dealt.where(games_user: user).count < current_user.company.cards.count %>
+    <% if Dealt.where(games_user: @dealt.games_user_id).count < current_user.company.cards.count %>
       <%= f.hidden_field :card_id, value: available_cards.sample.id %>
       <%= f.submit "Draw", class: "btn btn--secondary" %>
     <% else %>

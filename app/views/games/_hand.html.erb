@@ -13,12 +13,10 @@
       </div>
 
       <%= turbo_frame_tag "draw_card_frame" do %>
-        <div class="px-2 py-10 draw">
-              <%= link_to "Draw",
-                      new_dealt_path(game_id: @game.id),
-                      class: "btn btn--secondary"%>
-        </div>
+        <%= render "dealts/form", dealt: @dealt %>
       <% end %>
 
+      if @dealt.games_user.is_current_turn
+        render draw
     </div>
 <% end %>

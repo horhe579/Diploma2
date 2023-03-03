@@ -7,7 +7,7 @@ class DealtsController < ApplicationController
     end
     
     def new
-        @dealt = Dealt.new
+        @dealt = Dealt.new(dealts_params)
     end
     
     def create
@@ -16,11 +16,13 @@ class DealtsController < ApplicationController
           if @dealt.save
             respond_to do |format|
               format.html { redirect_to game_path(current_user.game_id), notice: "You drew one card." }
-              render turbo_stream: turbo_stream.append(
-                "draw_card_frame",
-                partial: "form",
-                locals: { game: @dealt }
-              )
+              format.turbo_stream do 
+                render turbo_stream: turbo_stream.append(
+                  "draw_card_frame",
+                  partial: "form",
+                  locals: { game: @dealt }
+                )
+              end
             end
           else
             render :new

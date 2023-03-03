@@ -17,6 +17,7 @@ class GamesController < ApplicationController
       
     def show
         if @game.games_users.count == 4
+            @dealt = Dealt.new(games_user: GamesUser.find_by(user_id: current_user.id, game_id: @game.id))
             render "games/_play" #partial
         else
             render "games/show"

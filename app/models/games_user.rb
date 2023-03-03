@@ -16,6 +16,17 @@ class GamesUser < ApplicationRecord
     #validate uniqueness of za da ne moje da joinva edin user 2 puti
     #kakto i da se pokazva formata samo ako ne si v dadenata igra
 
+    def is_current_turn?
+        players = GamesUser.where(game_id: self.game_id).order(:created_at).to_a
+        my_position = players.index_of(self)
+
+        #dovurshi
+    end
+
+    #metod za sravnenie na hpto i shtita
+
+
+    #is current turn, opredelq dali v momenta e red na segashniq igrach
     private
 
     def setup_game
