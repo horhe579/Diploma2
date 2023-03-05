@@ -1,16 +1,22 @@
 
 
-  gu1:
-    game_id: 980190962
-    user: manager
-    company: rogue
+  # gu1:
+  #   game_id: 980190962
+  #   user: manager
+  #   company: rogue
+  #   hp: 10
+  #   shield: 0
 
-  gu2:
-    game_id: 980190962
-    user: temp2
-    company: paladin
+  # gu2:
+  #   game_id: 980190962
+  #   user: accountant
+  #   company: paladin
+  #   hp: 10
+  #   shield: 0
 
-  gu3:
-    game_id: 980190962
-    user: temp3
-    company: wizard
+  # gu3:
+  #   game_id: 980190962
+  #   user: rogue
+  #   company: wizard
+  #   hp: 10
+  #   shield: 0

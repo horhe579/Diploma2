@@ -585,6 +585,7 @@
   paladin_card23:
     company: paladin
     name: Banishing Smite
+    damage: 4
     image: cards/banishing_smite.png
     back_of_card: cards/paladin_back.png
 
@@ -725,6 +726,8 @@
   barbarian_card14:
     company: barbarian
     name: Whirling Axes
+    damage: 2
+    heal: 2
     image: cards/whirling_axes.png
     back_of_card: cards/barbarian_back.png
 
@@ -826,5 +829,7 @@
   barbarian_card28:
     company: barbarian
     name: Whirling Axes
+    damage: 2
+    heal: 2
     image: cards/whirling_axes.png
     back_of_card: cards/barbarian_back.png

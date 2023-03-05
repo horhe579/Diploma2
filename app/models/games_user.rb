@@ -28,7 +28,21 @@ class GamesUser < ApplicationRecord
 
     def is_current_turn?
         players = GamesUser.where(game_id: self.game_id).order(:created_at).to_a
-        my_position = players.index_of(self)
+        my_position = players.index(self)
+        previous_player_id = players[(my_position - 1) % players.count].id
+
+        last_turn = Turn.joins(:games_user).where(games_users: { game_id: self.game_id }).last
+        last_dealt = Dealt.joins(:games_user).where(games_users: { game_id: self.game_id }).last
+
+        if last_turn.nil? 
+            #v nachaloto na igrata nqma playove, rezultatut se opredelq sprqmo koi e vlqzul purvi
+            return players[0].id == self.id
+        elsif last_turn.games_user_id == previous_player_id && last_dealt.games_user_id == previous_player_id
+            #ako posledniq hod e na igracha predi men znachi sega e moi red
+            return true
+        else
+            return false
+        end
 
         #dovurshi
     end
@@ -41,7 +55,7 @@ class GamesUser < ApplicationRecord
 
     def setup_game
         if game.games_users.count == 4
-            game.games_users.each do |player|
+            game.games_users.order(:created_at).each do |player|
                 3.times do
                     card = player.company.cards.where.not(id: Dealt.where(games_user: player).pluck(:card_id)).sample #no method dealts
                     Dealt.create(games_user: player, card: card)

@@ -15,8 +15,10 @@
         <%= render in_hand_cards %>
       </div>
 
-      <%= turbo_frame_tag "draw_card_frame" do %>
-        <%= render "dealts/form", dealt: @dealt %>
+      <% if GamesUser.find_by(user_id: current_user.id, game_id: current_user.game_id).is_current_turn? %>
+        <%= turbo_frame_tag "draw_card_frame" do %>
+          <%= render "dealts/form", dealt: @dealt %>
+        <% end %>
       <% end %>
 
       <%# if @dealt.games_user.is_current_turn
