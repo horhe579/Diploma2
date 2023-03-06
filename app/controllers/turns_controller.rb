@@ -3,7 +3,7 @@ class TurnsController < ApplicationController
   end
 
   def new
-    @turn = Turn.new
+    @turn = Turn.new(games_user_id: GamesUser.find_by(user_id: current_user.id, game_id: current_user.game_id).id, card_id: params[:card_id])
   end
 
   def create
@@ -39,6 +39,6 @@ class TurnsController < ApplicationController
   private
 
   def turns_params
-    params.require(:turn).permit(:games_user_id, :card_id)
+    params.require(:turn).permit(:games_user_id, :card_id, :damaged_games_user_id)
   end
 end

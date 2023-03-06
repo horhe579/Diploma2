@@ -11,7 +11,7 @@
                   input_html: { autocomplete: "username" }%>
     </div>
 
-    <div class="field form-group">
+    <div class="field form-group" hidden>
       <%= f.label :company_id %><br />
       <%= f.collection_select :company_id, Company.all, :id, :name, {}, { class: "form__dropdown" } %>
     </div>

@@ -12,6 +12,8 @@ class GamesUser < ApplicationRecord
     after_initialize :set_defaults
     after_create :setup_game
 
+    delegate :username, to: :user
+
 
     #validate uniqueness of za da ne moje da joinva edin user 2 puti
     #kakto i da se pokazva formata samo ako ne si v dadenata igra
@@ -46,6 +48,7 @@ class GamesUser < ApplicationRecord
 
         #dovurshi
     end
+
 
     #metod za sravnenie na hpto i shtita
 

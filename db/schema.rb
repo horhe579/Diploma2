@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_27_090955) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_06_055006) do
   create_table "cards", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", null: false
@@ -42,13 +42,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_27_090955) do
   end
 
   create_table "games", force: :cascade do |t|
-    t.boolean "rogue", default: true
-    t.boolean "wizard", default: true
-    t.boolean "paladin", default: true
-    t.boolean "barbarian", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "last_selected_deck"
     t.integer "user_id", null: false
     t.index ["user_id"], name: "index_games_on_user_id"
   end
@@ -71,6 +66,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_27_090955) do
     t.integer "card_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "damaged_games_user_id"
     t.index ["card_id"], name: "index_turns_on_card_id"
     t.index ["games_user_id"], name: "index_turns_on_games_user_id"
   end
