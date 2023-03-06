@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_06_055006) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_06_135450) do
   create_table "cards", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", null: false
@@ -54,8 +54,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_06_055006) do
     t.integer "company_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "hp"
-    t.integer "shield"
+    t.integer "hp", default: 10
+    t.integer "shield", default: 0
     t.index ["company_id"], name: "index_games_users_on_company_id"
     t.index ["game_id"], name: "index_games_users_on_game_id"
     t.index ["user_id"], name: "index_games_users_on_user_id"
@@ -67,6 +67,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_06_055006) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "damaged_games_user_id"
+    t.integer "healed_games_user_id"
+    t.integer "shielded_games_user_id"
     t.index ["card_id"], name: "index_turns_on_card_id"
     t.index ["games_user_id"], name: "index_turns_on_games_user_id"
   end

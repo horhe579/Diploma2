@@ -39,6 +39,6 @@ class TurnsController < ApplicationController
   private
 
   def turns_params
-    params.require(:turn).permit(:games_user_id, :card_id, :damaged_games_user_id)
+    params.require(:turn).permit(:games_user_id, :card_id, :damaged_games_user_id, :healed_games_user_id, :shielded_games_user_id)
   end
 end
