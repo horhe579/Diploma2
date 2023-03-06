@@ -20,6 +20,10 @@ class Turn < ApplicationRecord
         damage_after_shield = [card.damage - damaged_user.shield, 0].max
         damaged_user.update(hp: [damaged_user.hp - damage_after_shield, 0].max)
         damaged_user.update(shield: [damaged_user.shield - card.damage, 0].max)
+
+        if damaged_user.hp <= 0
+          damaged_user.update(completed_at: Time.zone.now) 
+        end
         
       end
 

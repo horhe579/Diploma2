@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_06_135450) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_06_185310) do
   create_table "cards", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", null: false
@@ -56,6 +56,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_06_135450) do
     t.datetime "updated_at", null: false
     t.integer "hp", default: 10
     t.integer "shield", default: 0
+    t.datetime "completed_at"
     t.index ["company_id"], name: "index_games_users_on_company_id"
     t.index ["game_id"], name: "index_games_users_on_game_id"
     t.index ["user_id"], name: "index_games_users_on_user_id"
