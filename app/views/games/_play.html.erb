@@ -4,7 +4,12 @@
     <h1>Game</h1>
   </div>
 
-  <%= render partial: "games/hand" %>
+  <% if GamesUser.find_by(user_id: current_user.id, game: @game).completed_at != nil %>
+    Seems like you lost!
+  <% else %>
+    <%= render partial: "games/hand" %>
+  <% end %>
+
 
 
 

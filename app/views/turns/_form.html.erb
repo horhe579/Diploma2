@@ -12,16 +12,16 @@
     <%#= f.hidden_field :games_user_id, value: user.id %>
       <%= f.hidden_field :card_id, value: params[:card_id] %>
       <% if turn.card.damage > 0 %>
-        <% current_players = GamesUser.where(game_id: current_user.game_id).where.not(user_id: current_user.id) %>
+        <% current_players = GamesUser.where(game_id: latest_game.game_id, completed_at: nil).where.not(user_id: current_user.id) %>
         <%= f.collection_radio_buttons :damaged_games_user_id, current_players, :id, :username %>
       <% end %>
 
       <% if turn.card.heal > 0 %>
-        <%= f.hidden_field :healed_games_user_id, value: GamesUser.find_by(game_id: current_user.game_id, user_id: current_user.id).id %>
+        <%= f.hidden_field :healed_games_user_id, value: GamesUser.find_by(game_id: latest_game.game_id, user_id: current_user.id).id %>
       <% end %>
 
       <% if turn.card.shield > 0 %>
-        <%= f.hidden_field :shielded_games_user_id, value: GamesUser.find_by(game_id: current_user.game_id, user_id: current_user.id).id %>
+        <%= f.hidden_field :shielded_games_user_id, value: GamesUser.find_by(game_id: latest_game.game_id, user_id: current_user.id).id %>
       <% end %>
       <%= f.submit "Play", class: "btn btn--secondary" %>
 <% end %>

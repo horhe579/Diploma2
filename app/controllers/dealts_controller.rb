@@ -15,7 +15,7 @@ class DealtsController < ApplicationController
       
           if @dealt.save
             respond_to do |format|
-              format.html { redirect_to game_path(current_user.game_id), notice: "You drew one card." }
+              format.html { redirect_to game_path(latest_game.game_id), notice: "You drew one card." }
               format.turbo_stream do 
                 render turbo_stream: turbo_stream.append(
                   "draw_card_frame",

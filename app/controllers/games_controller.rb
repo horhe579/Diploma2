@@ -8,6 +8,12 @@ class GamesController < ApplicationController
     def create 
         @game = Game.new(user_id: current_user.id)
 
+
+        if latest_game.present?
+          redirect_to game_path(latest_game.game_id), alert: "You are already in another game."
+          return
+        end
+
         if @game.save
             redirect_to @game, notice: "Game was successfully created."
           else

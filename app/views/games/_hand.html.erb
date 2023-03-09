@@ -1,7 +1,7 @@
 <div class="container">
 <%= turbo_frame_tag "cards" do %>
   <% @cards = current_user.company.cards %>
-  <% in_hand_ids = GamesUser.find_by(user_id: current_user.id, game_id: current_user.game_id).in_hand %>
+  <% in_hand_ids = GamesUser.find_by(user_id: current_user.id, game: @game).in_hand %>
   <% in_hand_cards = @cards.select { |card| in_hand_ids.include?(card.id) } %>
 
     <div class="hand flex">
@@ -15,7 +15,7 @@
         <%= render in_hand_cards %>
       </div>
 
-      <% if GamesUser.find_by(user_id: current_user.id, game_id: current_user.game_id).is_current_turn? %>
+      <% if GamesUser.find_by(user_id: current_user.id, game: @game).is_current_turn? %>
         <%= turbo_frame_tag "draw_card_frame" do %>
           <%= render "dealts/form", dealt: @dealt %>
         <% end %>

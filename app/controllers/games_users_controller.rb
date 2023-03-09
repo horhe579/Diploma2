@@ -16,14 +16,13 @@ class GamesUsersController < ApplicationController
     #@games_user.hp = 10
     #put default values in model not here
 
-
-    if current_user.game_id.present?
-      redirect_to game_path(current_user.game_id), alert: "You are already in another game."
+    if latest_game.present?
+      redirect_to game_path(latest_game.game_id), alert: "You are already in another game."
       return
     end
 
     if @games_user.save
-      current_user.update(game_id: @games_user.game_id)
+      #current_user.update(game_id: @games_user.game_id)
       current_user.update(company_id: @games_user.company_id)
       respond_to do |format|
         format.html { redirect_to game_path(@games_user.game), notice: "Successfully joined game." }

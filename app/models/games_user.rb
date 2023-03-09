@@ -29,7 +29,7 @@ class GamesUser < ApplicationRecord
     end
 
     def is_current_turn?
-        players = GamesUser.where(game_id: self.game_id).order(:created_at).to_a
+        players = GamesUser.where(game_id: self.game_id, completed_at: nil).order(:created_at).to_a
         my_position = players.index(self)
         previous_player_id = players[(my_position - 1) % players.count].id
 
@@ -38,7 +38,11 @@ class GamesUser < ApplicationRecord
 
         if last_turn.nil? 
             #v nachaloto na igrata nqma playove, rezultatut se opredelq sprqmo koi e vlqzul purvi
-            return players[0].id == self.id
+            if last_dealt.games_user_id == previous_player_id
+                return players[0].id == self.id
+            else
+                return false
+            end
         elsif last_turn.games_user_id == previous_player_id && last_dealt.games_user_id == previous_player_id
             #ako posledniq hod e na igracha predi men znachi sega e moi red
             return true
@@ -47,6 +51,17 @@ class GamesUser < ApplicationRecord
         end
 
         #dovurshi
+    end
+
+    def check_end_game
+        if hp <= 0
+            update(completed_at: Time.zone.now)   
+        end
+
+        remaining_players = GamesUser.where(game_id: self.game_id, completed_at: nil)
+        if remaining_players.count == 1
+            remaining_players.last.update(completed_at: Time.zone.now)
+        end
     end
 
 
