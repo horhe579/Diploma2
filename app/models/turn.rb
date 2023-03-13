@@ -10,6 +10,17 @@ class Turn < ApplicationRecord
 
 
   after_save :apply_card_stats
+  after_create_commit do 
+    broadcasts_replace_to(
+      :turn
+      target: 
+    )
+    #kogato broadcastvam she vidq che se broadcastva kum imeto na streama, koeto chesto ne e svurzano s potrebiteql
+    #za da moje da streamvam kum konkreten potrebitel trqbva da moga da suzdam kanali, koito sa svurzani s imenata na potrebitelq i broadcasta da go poema tva
+    #tuk shte imam logika za pisane, koqto vklyuchva potrebitelq
+    #cheta dokumentaciqta
+    #2-3 primera kak se izpolzva
+  end
 
   def apply_card_stats
     card = Card.find_by(id: card_id)

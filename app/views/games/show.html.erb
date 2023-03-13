@@ -18,9 +18,9 @@
           </p>
         <% end %>
       </p>
-      <%# KOGATO IGRACHITE SE PRISAEDINQVAT KUM IGRATA I NE SA PULEN SUSTAV SE RENDERVA NESHTO, NO NE ZNAM KAKVO. NAPRAVI EMPTY STATE %>
     <% elsif GamesUser.where(game: @game, user: current_user).count == 1 && GamesUser.where(game: @game).count == 4%>
         <%= render "games/play" %>
+        <%#WHY DOES IT RENDER PLAY FOR ACCOUNTS NOT IN THE GAME?%>
     <% end %>
 
   </div>

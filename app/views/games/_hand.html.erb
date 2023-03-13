@@ -1,3 +1,5 @@
+<%= turbo_stream_from(:turn) %>
+
 <div class="container">
 <%= turbo_frame_tag "cards" do %>
   <% @cards = current_user.company.cards %>
