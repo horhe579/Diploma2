@@ -10,17 +10,38 @@ class Turn < ApplicationRecord
 
 
   after_save :apply_card_stats
-  # after_create_commit do 
-  #   broadcasts_replace_to(
-  #     :turn
-  #     target: 
-  #   )
+  after_create_commit do 
+    #puts "blvlallv"
+    #logika v broadcasta, ako e tekusht red broadcast prazno
+    players = GamesUser.where(game_id: self.games_user.game_id, completed_at: nil).order(:created_at).to_a
+    my_position = players.index(self.games_user)
+    next_user = players[(my_position + 1) % players.count]
+    if next_user.is_current_turn?
+      broadcast_replace_later_to(
+        #self.games_user.user, 
+        self.games_user.game,
+        target: "draw_card_frame_for_user_#{next_user.user.id}",
+        partial: "dealts/form", locals: { dealt: Dealt.find_by(games_user_id: self.games_user_id, card_id: self.card_id), current_user: self.games_user.user }
+
+      )
+    else
+      all_the_other_players = GamesUser.where(game_id: self.games_user.game).where.not(user_id: next_user.id)
+      all_the_other_players.each do |games_user| 
+        broadcast_replace_later_to(
+          #self.games_user.user, 
+          self.games_user.game,
+          target: "draw_card_frame_for_user_#{games_user.user.id}",
+          partial: "dealts/empty"
+
+        )
+      end
+    end  
   #   #kogato broadcastvam she vidq che se broadcastva kum imeto na streama, koeto chesto ne e svurzano s potrebiteql
   #   #za da moje da streamvam kum konkreten potrebitel trqbva da moga da suzdam kanali, koito sa svurzani s imenata na potrebitelq i broadcasta da go poema tva
   #   #tuk shte imam logika za pisane, koqto vklyuchva potrebitelq
   #   #cheta dokumentaciqta
-  #   #2-3 primera kak se izpolzva
-  # end
+    #2-3 primera kak se izpolzva
+  end
 
   def apply_card_stats
     card = Card.find_by(id: card_id)

@@ -1,4 +1,4 @@
-<%= turbo_stream_from(:turn) %>
+<%= turbo_stream_from(@game) %>
 
 <div class="container">
 <%= turbo_frame_tag "cards" do %>
@@ -16,9 +16,9 @@
       <div class="py-10 flex overflow-hidden hover:overflow-x-scroll rounded-lg">
         <%= render in_hand_cards %>
       </div>
-
-      <% if GamesUser.find_by(user_id: current_user.id, game: @game).is_current_turn? %>
-        <%= turbo_frame_tag "draw_card_frame" do %>
+        
+      <%= turbo_frame_tag "draw_card_frame_for_user_#{current_user.id}" do %>
+        <% if GamesUser.find_by(user_id: current_user.id, game: @game).is_current_turn? %>
           <%= render "dealts/form", dealt: @dealt %>
         <% end %>
       <% end %>

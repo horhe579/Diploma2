@@ -1,21 +1,21 @@
-<%= simple_form_for @dealt,
+<%= simple_form_for dealt,
                     html: {
                       class: "dealt form",
                       data: { turbo: false },
                     } do |f| %>  
-  <% if @dealt.errors.any? %>
+  <% if dealt.errors.any? %>
     <div class="error-message">
-      <%= @dealt.errors.full_messages.to_sentence.capitalize %>
+      <%= dealt.errors.full_messages.to_sentence.capitalize %>
     </div>
   <% end %>
 
     <%= f.hidden_field :games_user_id %>
 
-    <% dealt_cards = Dealt.where(games_user: @dealt.games_user_id).pluck(:card_id) %>
+    <% dealt_cards = Dealt.where(games_user: dealt.games_user_id).pluck(:card_id) %>
     <% available_cards = current_user.company.cards.where.not(id: dealt_cards) %>
 
 
-    <% if Dealt.where(games_user: @dealt.games_user_id).count < current_user.company.cards.count %>
+    <% if Dealt.where(games_user: dealt.games_user_id).count < current_user.company.cards.count %>
       <%= f.hidden_field :card_id, value: available_cards.sample.id %>
       <%= f.submit "Draw", class: "btn btn--secondary" %>
     <% else %>
