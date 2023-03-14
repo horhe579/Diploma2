@@ -7,3 +7,6 @@
         775704662,
         889144699,
         975447484]
+
+
+        turbo-stream action=\"replace\" target=\"turn_980191110\"><template><form class=\"simple_form dealt form\" id=\"edit_dealt_980191436\" data-turbo=\"false\" novalidate=\"novalidate\" action=\"/dealts/980191436\" accept-charset=\"UTF-8\" method=\"post\"><input type=\"hidden\" name=\"_method\" val...
