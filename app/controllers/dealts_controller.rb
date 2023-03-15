@@ -17,8 +17,8 @@ class DealtsController < ApplicationController
             respond_to do |format|
               format.html { redirect_to game_path(latest_game.game_id), notice: "You drew one card." }
               format.turbo_stream do 
-                render turbo_stream: turbo_stream.append(
-                  "draw_card_frame",
+                render turbo_stream: turbo_stream.replace(
+                  "draw_card_frame_for_user_#{current_user.id}",
                   partial: "form",
                   locals: { game: @dealt }
                 )
@@ -34,6 +34,7 @@ class DealtsController < ApplicationController
     end
     
     def update
+      head :no_content
     end
 
     private

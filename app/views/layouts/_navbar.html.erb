@@ -1,7 +1,10 @@
 <header class="navbar">
   <% if user_signed_in? %>
     <div class="navbar__brand">
-      <%= current_company.name %>
+      <% if latest_game.present? %>
+        <%= "Game #" %>
+        <%=  latest_game.game_id %>
+      <% end %>
     </div>
     <div class="navbar__name">
       <%= link_to  current_user.username , edit_user_registration_path, method: :get %>

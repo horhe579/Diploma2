@@ -55,12 +55,14 @@ class GamesUser < ApplicationRecord
 
     def check_end_game
         if hp <= 0
-            update(completed_at: Time.zone.now)   
+            update(completed_at: Time.zone.now)
+            self.user.update(company_id: 593363170)   
         end
 
         remaining_players = GamesUser.where(game_id: self.game_id, completed_at: nil)
         if remaining_players.count == 1
             remaining_players.last.update(completed_at: Time.zone.now)
+            remaining_players.user.update(company_id: 593363170)
         end
     end
 

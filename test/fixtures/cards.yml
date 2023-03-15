@@ -20,6 +20,8 @@
   rogue_card3:
     company: rogue
     name: Sneak Attack!
+    damage: 1
+    shield: 1
     play_again: 1
     image: cards/sneak_attack.png
     back_of_card: cards/rogue_back.png
@@ -57,6 +59,8 @@
   rogue_card8:
     company: rogue
     name: Pick Pocket
+    shield: 1
+    heal: 1
     draw: 2
     image: cards/pick_pocket.png
     back_of_card: cards/rogue_back.png
@@ -80,6 +84,7 @@
     company: rogue
     name: Even More Daggers
     draw: 2
+    damage: 1
     heal: 1
     image: cards/even_more_daggers.png
     back_of_card: cards/rogue_back.png
@@ -110,6 +115,8 @@
   rogue_card15:
     company: rogue
     name: Sneak Attack!
+    damage: 1
+    shield: 1
     play_again: 1
     image: cards/sneak_attack.png
     back_of_card: cards/rogue_back.png
@@ -117,6 +124,8 @@
   rogue_card16:
     company: rogue
     name: Pick Pocket
+    shield: 1
+    heal: 1
     draw: 2
     image: cards/pick_pocket.png
     back_of_card: cards/rogue_back.png
@@ -161,6 +170,9 @@
   rogue_card22:
     company: rogue
     name: Cunning Action
+    heal: 1
+    shield: 2
+    damage: 1
     play_again: 2
     image: cards/cunning_action.png
     back_of_card: cards/rogue_back.png
@@ -205,6 +217,9 @@
   rogue_card28:
     company: rogue
     name: Cunning Action
+    heal: 1
+    shield: 2
+    damage: 1
     play_again: 2
     image: cards/cunning_action.png
     back_of_card: cards/rogue_back.png
@@ -228,6 +243,8 @@
   wizard_card3:
     company: wizard
     name: Knowledge Is Power
+    heal: 1
+    shield: 1
     draw: 3
     image: cards/knowledge_is_power.png
     back_of_card: cards/wizard_back.png
@@ -295,6 +312,8 @@
   wizard_card12:
     company: wizard
     name: Knowledge Is Power
+    heal: 1
+    shield: 1
     draw: 3
     image: cards/knowledge_is_power.png
     back_of_card: cards/wizard_back.png
@@ -302,6 +321,7 @@
   wizard_card13:
     company: wizard
     name: Speed Of Thought
+    damage: 2
     draw: 2
     image: cards/speed_of_thought.png
     back_of_card: cards/wizard_back.png
@@ -355,6 +375,7 @@
   wizard_card20:
     company: wizard
     name: Speed Of Thought
+    damage: 2
     play_again: 2
     image: cards/speed_of_thought.png
     back_of_card: cards/wizard_back.png
@@ -391,6 +412,8 @@
   wizard_card25:
     company: wizard
     name: Knowledge Is Power
+    heal: 1
+    shield: 1
     draw: 3
     image: cards/knowledge_is_power.png
     back_of_card: cards/wizard_back.png
@@ -414,6 +437,7 @@
   wizard_card28:
     company: wizard
     name: Speed Of Thought
+    damage: 2
     play_again: 2
     image: cards/speed_of_thought.png
     back_of_card: cards/wizard_back.png
@@ -489,6 +513,7 @@
   paladin_card10:
     company: paladin
     name: Finger-Wag Of Judgment
+    shield: 2
     play_again: 2
     image: cards/finger-wag_of_judgment.png
     back_of_card: cards/paladin_back.png
@@ -496,6 +521,7 @@
   paladin_card11:
     company: paladin
     name: High Charisma
+    heal: 2
     draw: 2
     image: cards/high_charisma.png
     back_of_card: cards/paladin_back.png
@@ -541,6 +567,7 @@
   paladin_card17:
     company: paladin
     name: High Charisma
+    heal: 2
     draw: 2
     image: cards/high_charisma.png
     back_of_card: cards/paladin_back.png
@@ -556,6 +583,7 @@
   paladin_card19:
     company: paladin
     name: Finger-Wag Of Judgment
+    shield: 2
     play_again: 2
     image: cards/finger-wag_of_judgment.png
     back_of_card: cards/paladin_back.png
@@ -654,6 +682,7 @@
   barbarian_card4:
     company: barbarian
     name: Two Axes Are Better Than One
+    damage: 1
     play_again: 2
     image: cards/two_axes_are_better_than_one.png
     back_of_card: cards/barbarian_back.png
@@ -661,6 +690,7 @@
   barbarian_card5:
     company: barbarian
     name: Two Axes Are Better Than One
+    damage: 1
     play_again: 2
     image: cards/two_axes_are_better_than_one.png
     back_of_card: cards/barbarian_back.png
@@ -668,6 +698,8 @@
   barbarian_card6:
     company: barbarian
     name: Mighty Toss
+    shield: 1
+    damage: 1
     draw: 1
     image: cards/mighty_toss.png
     back_of_card: cards/barbarian_back.png
@@ -703,6 +735,8 @@
   barbarian_card11:
     company: barbarian
     name: Open The Armory
+    heal: 1
+    shield: 1
     draw: 2
     image: cards/open_the_armory.png
     back_of_card: cards/barbarian_back.png
@@ -758,6 +792,8 @@
   barbarian_card18:
     company: barbarian
     name: Open The Armory
+    heal: 1
+    shield: 1
     draw: 2
     image: cards/open_the_armory.png
     back_of_card: cards/barbarian_back.png
@@ -772,6 +808,7 @@
   barbarian_card20:
     company: barbarian
     name: Battle Roar
+    shield: 2
     play_again: 1
     image: cards/battle_roar.png
     back_of_card: cards/barbarian_back.png
@@ -779,6 +816,7 @@
   barbarian_card21:
     company: barbarian
     name: Battle Roar
+    shield: 2
     play_again: 1
     image: cards/battle_roar.png
     back_of_card: cards/barbarian_back.png
@@ -787,6 +825,7 @@
     company: barbarian
     name: Spiked Shield
     shield: 2
+    damage: 1
     image: cards/spiked_shield.png
     back_of_card: cards/barbarian_back.png
 
@@ -800,6 +839,8 @@
   barbarian_card24:
     company: barbarian
     name: Mighty Toss
+    shield: 1
+    damage: 1
     draw: 1
     image: cards/mighty_toss.png
     back_of_card: cards/barbarian_back.png
