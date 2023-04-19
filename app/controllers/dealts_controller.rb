@@ -17,10 +17,10 @@ class DealtsController < ApplicationController
             respond_to do |format|
               format.html { redirect_to game_path(latest_game.game_id), notice: "You drew one card." }
               format.turbo_stream do 
+                @game = @dealt.games_user.game
                 render turbo_stream: turbo_stream.replace(
-                  "draw_card_frame_for_user_#{current_user.id}",
-                  partial: "form",
-                  locals: { game: @dealt }
+                  "cards",
+                  partial: "games/hand_cards"
                 )
               end
             end

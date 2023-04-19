@@ -15,17 +15,18 @@ class Turn < ApplicationRecord
     #logika v broadcasta, ako e tekusht red broadcast prazno
     players = GamesUser.where(game_id: self.games_user.game_id, completed_at: nil).order(:created_at).to_a
     my_position = players.index(self.games_user)
-    next_user = players[(my_position + 1) % players.count]
-    if next_user.is_current_turn?
+    next_games_user = players[(my_position + 1) % players.count]
+    if next_games_user.is_current_turn?
+      dealt = Dealt.new(games_user_id: self.games_user_id)
       broadcast_replace_later_to(
         #self.games_user.user, 
         self.games_user.game,
-        target: "draw_card_frame_for_user_#{next_user.user.id}",
-        partial: "dealts/form", locals: { dealt: Dealt.find_by(games_user_id: self.games_user_id, card_id: self.card_id), current_user: self.games_user.user }
+        target: "draw_card_frame_for_user_#{next_games_user.user.id}",
+        partial: "dealts/form", locals: {dealt: nil,  games_user_id: next_games_user.id, current_user: next_games_user.user }
 
       )
     else
-      all_the_other_players = GamesUser.where(game_id: self.games_user.game).where.not(user_id: next_user.id)
+      all_the_other_players = GamesUser.where(game_id: self.games_user.game).where.not(user_id: next_games_user.id)
       all_the_other_players.each do |games_user| 
         broadcast_replace_later_to(
           #self.games_user.user, 

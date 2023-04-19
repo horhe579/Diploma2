@@ -1,7 +1,10 @@
+<% if dealt == nil %>
+<% dealt = Dealt.new(games_user_id: games_user_id) %>
+<% end %>
 <%= simple_form_for dealt,
                     html: {
                       class: "dealt form",
-                      data: { turbo: false },
+                      data: { turbo: true },
                     } do |f| %>  
   <% if dealt.errors.any? %>
     <div class="error-message">
@@ -16,7 +19,7 @@
 
 
     <% if Dealt.where(games_user: dealt.games_user_id).count < current_user.company.cards.count %>
-      <%= f.hidden_field :card_id, value: available_cards.sample.id %>
+      <%= f.hidden_field :card_id, value: available_cards.first.id %>
       <%= f.submit "Draw", class: "btn btn--secondary" %>
     <% else %>
       <button disabled class="bg-gray-300 text-gray-500 cursor-not-allowed px-5 py-2 rounded-md text-sm font-medium">

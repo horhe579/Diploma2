@@ -2,28 +2,5 @@
 
 <div class="container">
 <%= turbo_frame_tag "cards" do %>
-  <% @cards = current_user.company.cards %>
-  <% in_hand_ids = GamesUser.find_by(user_id: current_user.id, game: @game).in_hand %>
-  <% in_hand_cards = @cards.select { |card| in_hand_ids.include?(card.id) } %>
-
-    <div class="hand flex">
-
-      <div class="py-10 max-w-xxs mx-2 rounded-lg">
-          <% card = @cards.last %>
-          <%= image_tag card.back_of_card, alt: "Image of the back of the card.", class: "rounded-t-lg mb-none" %>
-      </div>
-
-      <div class="py-10 flex overflow-hidden hover:overflow-x-scroll rounded-lg">
-        <%= render in_hand_cards %>
-      </div>
-        
-      <%= turbo_frame_tag "draw_card_frame_for_user_#{current_user.id}" do %>
-        <% if GamesUser.find_by(user_id: current_user.id, game: @game).is_current_turn? %>
-          <%= render "dealts/form", dealt: @dealt %>
-        <% end %>
-      <% end %>
-
-      <%# if @dealt.games_user.is_current_turn
-        render draw %>
-    </div>
+  <% render "hand_cards" %>
 <% end %>
