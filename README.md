@@ -13,3 +13,5 @@
   *yarn build:css --watch
 
   *bin/rails tailwindcss:watch
+
+[Documentation](Diploma_documentation.pdf)
