@@ -1,3 +1,5 @@
+##[Documentation](Diploma_documentation.pdf)
+
 
 * Ruby v 3.1.3p185
 * Rails v 7.0.4.1
@@ -14,4 +16,4 @@
 
   *bin/rails tailwindcss:watch
 
-[Documentation](Diploma_documentation.pdf)
+
