@@ -17,4 +17,6 @@
   *bin/rails tailwindcss:watch
 
 
-[![Project Demo](https://raw.githubusercontent.com/horhe579/Diploma2/master/thumbnail.png)](https://raw.githubusercontent.com/horhe579/Diploma2/master/DiplomaDemo.mp4)
+https://github.com/horhe579/Diploma2/assets/48655110/24f2e294-e441-404a-91b7-48fa072285fa
+
+
